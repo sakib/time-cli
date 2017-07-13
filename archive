@@ -1,0 +1,1 @@
+git archive --format tar --remote ssh://git@stash.hioscar.com:7999/oscar/ansible.git HEAD -- | tar -xf - --directory ansible
