@@ -10,8 +10,6 @@ NUM_TRIALS = int(sys.argv[2])
 delta_sum = datetime.timedelta(0)
 DIRTY = ['ansible'] # you edit this
 wait_list = map(lambda x: int(x), sys.argv[3:])
-if len(wait_list) == 0: wait_list = [1 for c in commands]
-
 
 # generic directory cleanup
 def cleanup(file_dir_list=DIRTY):
@@ -35,6 +33,8 @@ print 'cleaning up: ', cleanup()
 for x in range(NUM_TRIALS):
     proc_list = []
     start = datetime.datetime.now()
+
+    if len(wait_list) == 0: wait_list = [1 for c in commands]
 
     for i in range(len(commands)):
         cmd = filter(lambda str: str != '', commands[i].split(' '))

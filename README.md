@@ -15,6 +15,8 @@ $ ./run.py <command_file> <num_trials> [<wait_list>]
 see the other files to see how these examples match up. feel free to modify the cleanup function.
 
 ```
-$ ./run.py command 10
-$ ./run.py archive 4 0 1
+$ ./run.py <command> 10
+$ ./run.py commands/toucher 50
+$ ./run.py commands/clone 10
+$ ./run.py commands/archive 4 0 1
 ```
